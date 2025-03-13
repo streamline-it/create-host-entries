@@ -1,5 +1,5 @@
 ---
 # create-host-entries
 # setup variable to hold host entriees
-host_file_host_entrries:
+create_host_entries_host_file_host_entrries:
   - '10.0.0.<address> <hostname>'

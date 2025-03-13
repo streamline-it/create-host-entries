@@ -1,2 +1,7 @@
 # create-create-host-entries
 Create host entries for /etc/hosts file
+
+# create-host-entries
+# setup variable to hold host entriees
+create_host_entries_host_file_host_entrries:
+  - '10.0.0.<address> <hostname>'
