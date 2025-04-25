@@ -8,9 +8,9 @@
 
 - name: ensure hosts exist under /etc/hosts
   loop:
-	  "{{ create_host_entries_host_file_host_entries }}"
-	when: ansible_fqdn not in host_file_host_entries
-	ansible.builtin.lineinfile:
-	  path: /etc/hosts
-	  line: "{{ item }}"
+    "{{ create_host_entries_host_file_host_entries }}"
+  when: ansible_fqdn not in create_host_entries_host_file_host_entries
+  ansible.builtin.lineinfile:
+    path: /etc/hosts
+    line: "{{ item }}"
     state: present
