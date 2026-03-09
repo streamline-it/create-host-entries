@@ -1,0 +1,7 @@
+---
+- name: ensure key variable(s) are defined
+  anble.builtin.assert:
+    that: 
+      - create_host_entries_host_file_host_entries is defined
+      - create_host_entries_host_file_host_entries is truthy
+    fail_msg: "You must define these variable(s)"
